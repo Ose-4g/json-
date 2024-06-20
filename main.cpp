@@ -1,5 +1,7 @@
 #include <iostream>
+#include "json.h"
 
 int main(){
-    std::cout<<"Hello World!"<<std::endl;
+   ose4g::jsonpp::JSONNode json = ose4g::jsonpp::JSONObjectNode();
+   json["name"] = ose4g::jsonpp::JSONStringValue("name");
 }
