@@ -1,5 +1,9 @@
 {
     "name":"ose4g",
     "age": 24,
-    "height": 5.11
+    "height": 5.11,
+    "school":{
+        "name": "uni"
+    },
+    "hobbies": ["gym", 1, 1.5, true]
 }
