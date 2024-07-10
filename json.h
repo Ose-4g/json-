@@ -1,3 +1,7 @@
+#ifndef JSON_HEADER
+#define JSON_HEADER
+
+
 #include <iostream>
 #include <unordered_map>
 #include <vector>
@@ -214,3 +218,5 @@ public:
 };
 
 using JSON = JSONNode;
+
+#endif
