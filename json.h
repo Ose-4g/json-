@@ -215,6 +215,7 @@ public:
 
     // static methods
     static JSONNode parse(const std::string &s);
+    static std::string stringify(const JSONNode& node);
 };
 
 using JSON = JSONNode;

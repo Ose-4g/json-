@@ -13,8 +13,10 @@ int main()
     json["school"] = JSON(JSONType::OBJECT);
     json["school"]["name"] = "UNILAG";
 
+    std::cout<<JSON::stringify(json)<<std::endl;
+
     std::string s = "{  \n\"name\":\"ose\n4g\",\"age\":24,\"height\":5.11,\"school\":{\"name\":\"uni\"},\"hobbies\":[\"gym\",1,  1.5,  \nfalse]}";
     auto ans  = JSON::parse(s);
 
-    std::cout<<(bool(ans["hobbies"][3]) == true ? "true" : "false")<<std::endl;
+    // std::cout<<(bool(ans["hobbies"][3]) == true ? "true" : "false")<<std::endl;
 }
