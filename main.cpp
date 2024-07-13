@@ -32,5 +32,7 @@ int main()
     
     // parsing the strigified json.
     std::cout<<"Result of parsing the stringified json:\n"<<JSON::stringify(ans)<<"\n\n\n";
+    std::cout<<json<<std::endl;
+    std::cout<<json1<<std::endl;
 
 }

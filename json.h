@@ -216,6 +216,40 @@ public:
     // static methods
     static JSONNode parse(const std::string &s);
     static std::string stringify(const JSONNode& node);
+
+    friend std::ostream& operator<< (std::ostream& stream, const JSONNode& json){
+        std::string s = JSONNode::stringify(json);
+        int spaces = 0;
+        int tab = 4;
+        for(char c: s)
+        {
+            if(c=='{' || c=='[')
+            {
+                stream << c;
+                stream << '\n';
+                spaces+=tab;
+                stream << std::string(spaces, ' ');
+            }
+            else if(c == '}' || c == ']')
+            {
+                spaces-=tab;
+                stream << '\n';
+                stream << std::string(spaces, ' ');
+                stream << c;
+            }
+            else if(c == ',')
+            {
+                stream << c;
+                stream << '\n';
+                stream << std::string(spaces, ' ');
+            }
+            else 
+            {
+                stream << c;
+            }
+        }
+        return stream;
+    };
 };
 
 using JSON = JSONNode;
