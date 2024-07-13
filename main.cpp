@@ -8,7 +8,7 @@ int main()
     JSON json1(JSON::parse(jsonstring));
 
     std::cout<<"array third element is "<<int(json1["array"][2])<<std::endl;
-    std::cout<<"value of color is"<<std::string(json1["color"])<<std::endl;
+    std::cout<<"value of color is "<<std::string(json1["color"])<<std::endl;
     std::cout<<"value of a in object is "<<std::string(json1["object"]["a"])<<std::endl;
     std::cout<<"value of number is "<<int(json1["number"])<<std::endl;
     std::cout<<"\n\n\n";
