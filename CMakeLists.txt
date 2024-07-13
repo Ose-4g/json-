@@ -4,7 +4,8 @@ project(jsonpp)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(jsonpp main.cpp)
+
+add_executable(jsonpp main.cpp json.cpp)
 
 include(FetchContent)
 FetchContent_Declare(
