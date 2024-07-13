@@ -1,3 +1,7 @@
+#ifndef JSON_HEADER
+#define JSON_HEADER
+
+
 #include <iostream>
 #include <unordered_map>
 #include <vector>
@@ -116,7 +120,7 @@ public:
         d_value.d_number = node.d_value.d_number;
     }
 
-    // copy assignment operator 
+    // copy assignment operator
     JSONNode &operator=(const JSONNode &node)
     {
         d_type = node.d_type;
@@ -129,7 +133,6 @@ public:
 
         return *this;
     }
-
 
     bool isValue()
     {
@@ -170,7 +173,6 @@ public:
         return static_cast<T>(d_value);
     }
 
-
     // index operator overloads
     JSONNode &operator[](int index)
     {
@@ -209,7 +211,13 @@ public:
     operator bool()
     {
         return d_value.d_bool;
-    }    
+    }
+
+    // static methods
+    static JSONNode parse(const std::string &s);
+    static std::string stringify(const JSONNode& node);
 };
 
 using JSON = JSONNode;
+
+#endif
